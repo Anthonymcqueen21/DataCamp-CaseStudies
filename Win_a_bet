@@ -1,0 +1,6 @@
+#CaseStudy from the Intermediate Python course
+import numpy as np
+#Set the seed and generate random int
+np.random.seed(123)
+#slices are noninclusive
+print(np.random.rand(1,7))
