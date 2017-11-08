@@ -2,5 +2,41 @@
 import numpy as np
 #Set the seed and generate random int
 np.random.seed(123)
-#slices are noninclusive
-print(np.random.rand(1,7))
+#Set up simulations
+all_walks = [0]
+for i in range (1000)
+  # Initialize random_walk
+  random_walk [0]
+  for x in range(100):
+    #Sets step as the last element in random_walk
+    step = random_walk[-1]
+
+    #roll the dice.  slices are noninclusive
+    dice = np.random.rand(1,7)
+
+    #determine next step
+    if dice <= 2:
+     step = max(0, step - 1)
+    elif dice <= 5:
+     step = step + 1
+    else:
+     step = step + np.random.randint(1,7)
+    
+    #implement clumsiness
+    if np.random.rand() <= 0.001
+      step = 0
+      
+    #append next step to random_walk
+    random_walk.append(step)
+  all_walks.append(random_walk)
+
+#Calculate the probability that you will be at or higher than 60 steps
+#after 100 dice throws
+#convert all walks into a numpy array and transpose it
+all_walks_t = np.transpose (np.array(all_walks))
+#select last row of transposed array to indicate final step
+ends = all_walks_t [-1]
+#calculate probability of winning bet (final step >= 60)
+winner = ends >=60
+p = winner.sum()/len(ends)
+print(p)
