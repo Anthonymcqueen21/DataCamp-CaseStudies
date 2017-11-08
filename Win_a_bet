@@ -30,8 +30,7 @@ for i in range (1000)
     random_walk.append(step)
   all_walks.append(random_walk)
 
-#Calculate the probability that you will be at or higher than 60 steps
-#after 100 dice throws
+#Calculate the probability that you will be at or higher than 60 steps after 100 dice throws
 #convert all walks into a numpy array and transpose it
 all_walks_t = np.transpose (np.array(all_walks))
 #select last row of transposed array to indicate final step
