@@ -1,5 +1,0 @@
-#Case Study from pandas foundation course
-import pandas as pd
-
-#Read in the data file: df
-df = pd.read_csv('data.csv')
